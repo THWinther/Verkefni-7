@@ -32,7 +32,7 @@ function start() {
 function play() {
   let Right=0;
   let time=0;
-  for(i=0; i<10;i++){
+  for(i=0; i<GAMES_TO_PLAY;i++){
   var t1= performance.now();
   ask();
   var t2= performance.now();
