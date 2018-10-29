@@ -100,10 +100,11 @@ function ask() {
 function question(){
   let awnser=0;
   let questType= randomNumber(1,4);
+  let awnser=0;
   if(questType==1){
     let number1=randomNumber(1,100);
     let number2=randomNumber(1,100);
-    let awnser=number1+number2;
+    awnser=number1+number2;
     
 
 
@@ -111,19 +112,19 @@ function question(){
   if(questType==2){
     let number1=randomNumber(1,100);
     let number2=randomNumber(1,100);
-    let awnser=number1-number2;
+    awnser=number1-number2;
   }
   if(questType==3){
     let number1=randomNumber(1,10);
     let number2=randomNumber(1,10);
-    let awnser=number1*number2;
+    awnser=number1*number2;
 
 
   }
   if(questType==4){
     let number1=randomNumber(2,10);
     let number2=randomNumber(2,10);
-    let awnser=number1-number2;
+    awnser=number1-number2;
 
 
   }
