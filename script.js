@@ -32,7 +32,7 @@ function start() {
 function play() {
   let Right=0;
   let time=0;
-  for(i=0; i<GAMES_TO_PLAY;i++){
+  for(let i=0; i<GAMES_TO_PLAY;i++){
   var t1= performance.now();
   ask();
   var t2= performance.now();
@@ -98,13 +98,12 @@ function ask() {
 
 
 function question(){
-  let awnser=0;
   let questType= randomNumber(1,4);
-  let awnser=0;
+  let Rightawnser=0;
   if(questType==1){
     let number1=randomNumber(1,100);
     let number2=randomNumber(1,100);
-    awnser=number1+number2;
+    Rightawnser=number1+number2;
     
 
 
@@ -112,23 +111,23 @@ function question(){
   if(questType==2){
     let number1=randomNumber(1,100);
     let number2=randomNumber(1,100);
-    awnser=number1-number2;
+    Rightawnser=number1-number2;
   }
   if(questType==3){
     let number1=randomNumber(1,10);
     let number2=randomNumber(1,10);
-    awnser=number1*number2;
+    Rightawnser=number1*number2;
 
 
   }
   if(questType==4){
     let number1=randomNumber(2,10);
     let number2=randomNumber(2,10);
-    awnser=number1-number2;
+    Rightawnser=number1-number2;
 
 
   }
-  return [questType,number1,number2,awnser];
+  return [questType,number1,number2,Rightawnser];
 }
 
 
