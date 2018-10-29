@@ -13,7 +13,7 @@ const GAMES_TO_PLAY = 10;
  * Eftir leik er notanda boðið að spila annan leik, ef ekki hættir forrit.
  */
 function start() {
-  alert(`Velkominn í leikinn`);
+  alert(`Velkominn í leikinn tilbúinn að byrja?`);
   play();
   villa;
 }
@@ -39,8 +39,8 @@ function play() {
   time += t2-t1;
   if (ask==true){
   Right++;}
-
   }
+  alert('Að meðaltali það tók þig'+(time/GAMES_TO_PLAY)+'Millisekúndur til að klára hverju spurningu og þú hafðir'+Right+" Spurningar rétt")
 }
 
 /**
@@ -87,9 +87,7 @@ function ask() {
   {
     alert('Rangt');
   }
-  if(input==NaN){
-    break;
-  }
+
   return awnser;
     
   
@@ -100,29 +98,31 @@ function ask() {
 function question(){
   let questType= randomNumber(1,4);
   let Rightawnser=0;
+  let number1=0;
+  let number2=0;
   if(questType==1){
-    let number1=randomNumber(1,100);
-    let number2=randomNumber(1,100);
+    number1=randomNumber(1,100);
+    number2=randomNumber(1,100);
     Rightawnser=number1+number2;
     
 
 
   }
   if(questType==2){
-    let number1=randomNumber(1,100);
-    let number2=randomNumber(1,100);
+    number1=randomNumber(1,100);
+    number2=randomNumber(1,100);
     Rightawnser=number1-number2;
   }
   if(questType==3){
-    let number1=randomNumber(1,10);
-    let number2=randomNumber(1,10);
+    number1=randomNumber(1,10);
+    number2=randomNumber(1,10);
     Rightawnser=number1*number2;
 
 
   }
   if(questType==4){
-    let number1=randomNumber(2,10);
-    let number2=randomNumber(2,10);
+    number1=randomNumber(2,10);
+    number2=randomNumber(2,10);
     Rightawnser=number1-number2;
 
 
