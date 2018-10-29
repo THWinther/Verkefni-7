@@ -34,13 +34,19 @@ function play() {
   let time=0;
   for(let i=0; i<GAMES_TO_PLAY;i++){
   var t1= performance.now();
-  ask();
+  let Quest=ask();
   var t2= performance.now();
   time += t2-t1;
-  if (ask==true){
+  if(Quest==null){
+    Right=NaN;
+    break;
+  }
+  if (Quest==true){
   Right++;}
   }
-  alert('Að meðaltali það tók þig'+(time/GAMES_TO_PLAY)+'Millisekúndur til að klára hverju spurningu og þú hafðir'+Right+" Spurningar rétt")
+  if(Right!=NaN){
+  alert('Að meðaltali það tók þig '+(time/GAMES_TO_PLAY)+'Millisekúndur til að klára hverju spurningu og þú hafðir '+Right+" Spurningar rétt")
+  }
 }
 
 /**
@@ -79,6 +85,11 @@ function ask() {
   }
   
   let input= prompt(theQuestion);
+  if(input==null){
+    alert('Leikur endaður af þér why!!!!!')
+    awnser=null;
+    return awnser;
+  }
   if(input==questionArry[3]){
     awnser=true;
     alert('Rétt!');
@@ -87,6 +98,8 @@ function ask() {
   {
     alert('Rangt');
   }
+
+
 
   return awnser;
     
@@ -124,8 +137,6 @@ function question(){
     number1=randomNumber(2,10);
     number2=randomNumber(2,10);
     Rightawnser=number1-number2;
-
-
   }
   return [questType,number1,number2,Rightawnser];
 }
@@ -143,4 +154,8 @@ function randomNumber(min, max) {
 }
 
 // Byrjar leik
+do{
 start();
+let newGame=confirm('Viltu taka annan leik?')
+}
+while(newGame==)
