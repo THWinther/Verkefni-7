@@ -31,13 +31,17 @@ function start() {
  */
 function play() {
   let Right=0;
-  let Wrong=0;
   let time=0;
   for(i=0; i<10;i++){
+  var t1= performance.now();
   ask();
-  if (ask==true)Right++;
+  var t2= performance.now();
+  time += t2-t1;
+  if (ask==true){
+  Right++;}
 
-  }}
+  }
+}
 
 /**
  * Spyr einnar spurningar og skilar upplýsingum um svar (mögulega með því að
