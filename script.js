@@ -44,7 +44,7 @@ function play() {
   Right++;}
   }
   if(Right!=null){
-  alert('Að meðaltali það tók þig '+(time/GAMES_TO_PLAY)+'Millisekúndur til að klára hverju spurningu og þú hafðir '+Right+" Spurningar rétt")
+  alert('Að meðaltali það tók þig '+((time/1000)/GAMES_TO_PLAY)+' Sekúndur til að klára hverju spurningu og þú hafðir '+Right+" Spurningar rétt")
   }
 }
 
