@@ -15,7 +15,6 @@ const GAMES_TO_PLAY = 10;
 function start() {
   alert(`Velkominn í leikinn tilbúinn að byrja?`);
   play();
-  villa;
 }
 
 /**
@@ -38,13 +37,13 @@ function play() {
   var t2= performance.now();
   time += t2-t1;
   if(Quest==null){
-    Right=NaN;
+    Right=null;
     break;
   }
   if (Quest==true){
   Right++;}
   }
-  if(Right!=NaN){
+  if(Right!=null){
   alert('Að meðaltali það tók þig '+(time/GAMES_TO_PLAY)+'Millisekúndur til að klára hverju spurningu og þú hafðir '+Right+" Spurningar rétt")
   }
 }
@@ -154,8 +153,9 @@ function randomNumber(min, max) {
 }
 
 // Byrjar leik
+let newGame=false;
 do{
 start();
-let newGame=confirm('Viltu taka annan leik?')
+newGame=confirm('Viltu taka annan leik?')
 }
-while(newGame==)
+while(newGame==true);
